@@ -104,7 +104,7 @@ rawEnrichmentAnalysis <- function(expr, signatures, genes, file.name = NULL, par
   shared.genes <- intersect(rownames(expr), genes)
   print(paste("Num. of genes:", length(shared.genes)))
   expr <- expr[shared.genes, ]
-  if (dim(expr)[1] < 5000) {
+  if (dim(expr)[1] < 1000) {
     print(paste("ERROR: not enough genes"))
     return - 1
   }
